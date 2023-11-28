@@ -1,0 +1,23 @@
+{
+  "name": "Spark",
+  "version": "1.0.0",
+  "description": "A Sparx modification",
+  "manifest_version": 3,
+  "action":{
+    "default_popup": "popup/index.html",
+    "default_title": "Spark"
+  },
+
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.sparxscience.com/*"],
+      "js": ["/science/script.js"]
+    },
+
+    {
+      "matches": ["*://*.sparxmaths.uk/*"],
+      "js": ["/maths/script.js"]
+    }
+  ]
+}
