@@ -1,8 +1,11 @@
-prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-document.body.setAttribute("data-bs-theme", prefersDarkMode ? "dark" : "light");
+chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
+  const url = tabs[0].url;
 
-chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
-  let url = tabs[0].url;
+  const iframe = document.createElement("iframe");
+  iframe.classList.add("w-100");
 
-  console.log(url);
+  const topic = url.includes("science") ? "science" : url.includes("maths") ? "maths" : "error";
+  iframe.setAttribute("src", `/${topic}/embed.html`);
+
+  document.body.appendChild(iframe);
 });
