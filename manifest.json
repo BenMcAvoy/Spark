@@ -15,5 +15,9 @@
     "128": "icons/Spark128.png"
   },
 
-  "permissions": ["activeTab", "scripting"]
+  "permissions": [
+    "windows",
+    "activeTab",
+    "scripting"
+  ]
 }
