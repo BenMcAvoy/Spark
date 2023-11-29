@@ -8,16 +8,5 @@
     "default_title": "Spark"
   },
 
-  "permissions": ["activeTab"],
-  "content_scripts": [
-    {
-      "matches": ["*://*.sparxscience.com/*"],
-      "js": ["/science/script.js"]
-    },
-
-    {
-      "matches": ["*://*.sparxmaths.uk/*"],
-      "js": ["/maths/script.js"]
-    }
-  ]
+  "permissions": ["activeTab", "scripting"]
 }
