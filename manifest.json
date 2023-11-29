@@ -15,10 +15,6 @@
     "128": "icons/Spark128.png"
   },
 
-  "web_accessible_resources": [
-    "/static/modal.html"
-  ]
-
   "permissions": [
     "windows",
     "activeTab",
