@@ -10,17 +10,10 @@ document.getElementById('selectTextButton').addEventListener('click', async func
 });
 
 document.getElementById('copyTextButton').addEventListener('click', async function() {
-  const result = await execute(function(showAlert) {
-    const paragraphs = document.querySelectorAll('[class*="_Question_"]>div>p');
-    const hasImage = paragraphs[0].innerHTML.includes("img");
-    const slicedParagraphs = [].slice.call(paragraphs, 1);
+  const result = await execute(function() {
+    const text = document.querySelectorAll('[class*="_Question_"]>div>div>div>div')[0].textContent;
 
-    var extractedText = "";
-    slicedParagraphs.forEach((value) => {
-      extractedText += value.innerText;
-    })
-
-    return extractedText
+    return text;
   });
 
   showAlert(result);
