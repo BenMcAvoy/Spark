@@ -1,5 +1,5 @@
 import { execute } from '/static/executor.js';
-import { showAlert } from '/static/modal.js';
+import { copy } from '/static/copy.js';
 
 console.log("Loaded Spark for Science");
 
@@ -27,5 +27,5 @@ document.getElementById('getQuestion').addEventListener('click', async function(
     return text;
   });
 
-  showAlert(result);
+  copy(result);
 });
