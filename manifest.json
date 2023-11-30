@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A Sparx modification",
   "manifest_version": 3,
+
   "action":{
     "default_popup": "popup/index.html",
     "default_title": "Spark"
@@ -15,9 +16,16 @@
     "128": "icons/Spark128.png"
   },
 
+  "background": {
+    "service_worker": "/static/background.js",
+    "type": "module"
+  },
+
   "permissions": [
     "windows",
     "activeTab",
-    "scripting"
+    "scripting",
+    "tabs",
+    "contextMenus"
   ]
 }
