@@ -9,8 +9,8 @@ export async function showAlert(message) {
   const w2 = await chrome.windows.create({
     url: `data:text/html,${html}`,
     type: 'popup',
-    left: Math.floor(w.left + (w.width - 300) / 2),
-    top: Math.floor(w.top + (w.height - 150) / 2),
+    left: Math.floor(w.left + (w.width - 320) / 2),
+    top: Math.floor(w.top + (w.height - 240) / 2),
     height: 240,
     width: 320,
   });
