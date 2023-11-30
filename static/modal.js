@@ -7,13 +7,12 @@ export async function showAlert(message) {
 
   const w = await chrome.windows.getCurrent();
   const w2 = await chrome.windows.create({
-    // url: `data:text/html,<title>Alert</title><p>${message}</p>`,
     url: `data:text/html,${html}`,
     type: 'popup',
     left: Math.floor(w.left + (w.width - 300) / 2),
     top: Math.floor(w.top + (w.height - 150) / 2),
-    height: 150,
-    width: 300,
+    height: 240,
+    width: 320,
   });
 
   return new Promise(resolve => {
