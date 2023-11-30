@@ -1,6 +1,6 @@
-import { execute } from '/static/executor.js';
-import { showModal } from '/static/modal.js';
-import { copy } from '/static/copy.js';
+import { execute } from '/static/js/executor.js';
+import { showModal } from '/static/js/modal.js';
+import { copy } from '/static/js/copy.js';
 
 export async function selectPatch() {
   console.log("Patch");

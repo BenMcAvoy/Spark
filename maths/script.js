@@ -1,5 +1,5 @@
-import { execute } from '/static/executor.js';
-import { copy } from '/static/copy.js';
+import { execute } from '/static/js/executor.js';
+import { copy } from '/static/js/copy.js';
 
 console.log("Loading Spark for Maths");
 

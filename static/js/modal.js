@@ -1,5 +1,5 @@
 export async function showModal(message) {
-  const url = chrome.runtime.getURL('/static/modal.html');
+  const url = chrome.runtime.getURL('/static/html/modal.html');
 
   const html = await fetch(url)
     .then((response) => response.text())
