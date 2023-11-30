@@ -10,6 +10,8 @@ document.getElementById('selectTextButton').addEventListener('click', async func
 });
 
 document.getElementById('copyTextButton').addEventListener('click', async function() {
+  // TODO: Fix broken escapes.
+  // e.g. `Ã—{\times }Ã—`
   const result = await execute(function() {
     const text = document.querySelectorAll('[class*="_Question_"]>div>div>div>div')[0].textContent;
 
