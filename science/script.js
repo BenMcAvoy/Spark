@@ -17,7 +17,6 @@ document.getElementById('getQuestion').addEventListener('click', async function(
   // e.g. Don't select `Zoom`
   const result = await execute(function() {
     const elements = [...document.querySelectorAll('[class*="_Question_"]>div>div>div>div')];
-
     const text = elements.map((element) => `-${element.textContent}`).join('');
 
     return text;
